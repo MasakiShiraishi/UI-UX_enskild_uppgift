@@ -50,7 +50,16 @@
       alt="raining in the background"
     />
     <main>
-      <h1>Köp Biljetter</h1>
+      <%- include('../views/login.ejs') %>
+      <button id="showLoginFormBtn">Logga in</button>  
+      <h1>Köp Biljetter</h1> 
+      <a href="/biljetter">
+        <button>Hem</button>
+      </a>
+      <a href="/signup">
+        <button>Skapa konto</button>
+      </a>       
+    
     </main>
     <%- include('../views/partials/footer.ejs') %>
   </body>

@@ -26,6 +26,10 @@ app.get('/biljetter', async (req, res) => {
   res.render('biljetter');
 });
 
+app.get('/signup', async (req, res) => {
+  res.render('signup');
+});
+
 app.get('/evenemang', async (req, res) => {
   res.render('evenemang');
 });
