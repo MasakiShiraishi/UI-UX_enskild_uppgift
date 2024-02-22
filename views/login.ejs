@@ -1,0 +1,19 @@
+<body> 
+  <div class="overlay" id="overlay"></div>        
+  <link rel="stylesheet" href="/static/assets/login.css">
+  <div id="loginFormContainer" style="display: none;">
+    <form id="login-form">
+      <div class="form-group">
+        <label for="username">Användarnamn:</label>
+        <input type="text" class="username" class="form-control" placeholder="Användarnamn" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Lösenord:</label>
+        <input type="password" class="password" class="form-control" placeholder="Lösenord" required autocomplete="current-password">
+      </div>
+      <button type="submit">Logga in</button>
+      <button type="button" id="closeLoginFormBtn">Stäng</button>
+    </form>
+  </div>
+  <script src="/static/login.js"></script>
+</body>
