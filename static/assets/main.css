@@ -357,3 +357,53 @@ article {
   margin-top: 0.5em;
   font-size: 2em;
 }
+
+#signup__form {
+  background-color: white;
+  min-height: 100%;
+  margin-top: 2%;
+  height: 500px;
+  padding-top: 2%;
+}
+
+.form__group {
+  margin-top: 5px;
+}
+
+.form__label {
+  font-size: 2.3em;
+  text-align: left;
+  display: block;
+  margin-left: 20px;
+}
+
+.custom__height {
+  font-size: 2em;
+  height: 50px;
+  max-width: 100%;
+  width: 90%;
+  border-color: black;
+  margin-left: 20px;
+}
+
+.form__control.custom__height::placeholder {
+  color: #007bff;
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.skapa__button {
+  margin-top: 7%;
+  padding: 12px 23px;
+  font-size: 17px;
+}
+
+.hem__button {
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  width: auto;
+  border-radius: 4px;
+}
