@@ -11,7 +11,8 @@
     "dev": "nodemon .",
     "start": "node .",
     "build": "sass --no-source-map --watch static/src/main.scss static/assets/main.css",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "tailwind": "tailwindcss -i ./static/src/input.css -o ./static/src/output.css --watch"
   },
   "author": "JR",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "jest": "^29.7.0",
     "nodemon": "^3.0.2",
     "sass": "^1.70.0",
-    "supertest": "^6.3.4"
+    "supertest": "^6.3.4",
+    "tailwindcss": "^3.4.1"
   }
 }
