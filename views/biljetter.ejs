@@ -40,6 +40,7 @@
     <script type="module" src="./static/main.js" defer></script>
     <title>Biljetter</title>
     <link rel="icon" type="image/png" href="./static/assets/logga.png" />
+    <link href="/static/src/output.css" rel="stylesheet">
   </head>
 
   <body>
@@ -51,15 +52,19 @@
     />
     <main>
       <%- include('../views/login.ejs') %>
-      <button id="showLoginFormBtn">Logga in</button>  
-      <h1>Köp Biljetter</h1> 
+      <div class="relative w-full">
+        <button id="showLoginFormBtn" class="absolute right-1/4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 text-xl rounded mb-8">Logga in</button>
+      </div> 
+      <br>
+      <div class="mt-16">
+      <h1 class="text-4xl font-bold mb-32">Köp Biljetter</h1> 
       <a href="/biljetter">
-        <button>Hem</button>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-xxl mr-16">Hem</button>
       </a>
       <a href="/signup">
-        <button>Skapa konto</button>
+        <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded text-xxl">Skapa konto</button>
       </a>       
-    
+    </div>
     </main>
     <%- include('../views/partials/footer.ejs') %>
   </body>
