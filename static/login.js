@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   document
-    .querySelector('#login-form')
+    .querySelector('#login__form')
     .addEventListener('submit', function (event) {
       event.preventDefault();
       const loginFormData = {
