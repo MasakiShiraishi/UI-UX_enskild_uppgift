@@ -135,6 +135,10 @@ body .background__raining {
   cursor: pointer;
 }
 
+.logo {
+  height: 130px;
+}
+
 #faqBtn {
   font-size: 2rem;
   color: #222222;
