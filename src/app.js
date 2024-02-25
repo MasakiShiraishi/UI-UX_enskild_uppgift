@@ -29,6 +29,9 @@ app.get('/biljetter', async (req, res) => {
 app.get('/evenemang', async (req, res) => {
   res.render('evenemang');
 });
+app.get('/english', async (req, res) => {
+  res.render('english');
+});
 
 app.get('/filmer', async (req, res) => {
   const movies = await loadMovies();
