@@ -79,3 +79,13 @@ document
     loginFormContainer.addEventListener('animationend', onAnimationEnd);
     overlay.addEventListener('animationend', onAnimationEnd);
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Existing code for handling form submission and other interactions
+  
+    // Listen for clicks on the "Skapa konto" button
+    document.getElementById('createAccountBtn').addEventListener('click', function () {
+      // Redirect to the /signup page
+      window.location.href = '/signup';
+    });
+  });
