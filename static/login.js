@@ -18,18 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => response.json())
       .then(data => {
         if (data.success) {
-          // LocalStorageにユーザー情報を保存
+          // saved user information to LocalStorage
           localStorage.setItem('username', data.user.username);
           localStorage.setItem('email', data.user.email);
   
-          // プロフィールページにリダイレクト
+          // redirect to profile-page
           window.location.href = '/profile';
         } else {
-          alert('ログインに失敗しました。');
+          console.log('login failed');
         }
       })
       .catch(error => {
-        console.error('ログインエラー:', error);
+        console.error('login error:', error);
       });
     });
   });
