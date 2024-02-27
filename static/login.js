@@ -48,6 +48,9 @@ document
       // Remove event listeners to prevent memory leaks
       loginFormContainer.removeEventListener('animationend', onAnimationEnd);
       overlay.removeEventListener('animationend', onAnimationEnd);
+
+      // Redirect to the specified URL after hiding the form and overlay
+      window.location.href = 'http://localhost:5080/';
     };
 
     // Add event listeners for the end of the animations

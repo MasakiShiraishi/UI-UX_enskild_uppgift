@@ -34,6 +34,10 @@ app.get('/evenemang', async (req, res) => {
   res.render('evenemang');
 });
 
+app.get('/login', async (req, res) => {
+  res.render('login');
+});
+
 app.get('/filmer', async (req, res) => {
   const movies = await loadMovies();
   res.render('filmer', { movies });

@@ -1,4 +1,96 @@
-<body> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Folkets Bio i Grådask - Officiell webbplats för biograferna. Vi visar prisbelönt kvalitetsfilm från hela världen. Läs vårt program och boka era platser här."
+    />
+    <meta name="author" content="Folket Bio i Grådask" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Event - Biograf Regna" />
+    <meta
+      name="og:description"
+      content="Folkets Bio i Grådask - Officiell webbplats för biograferna. Vi visar prisbelönt kvalitetsfilm från hela världen. Läs vårt program och boka era platser här."
+    />
+    <meta
+      property="og:image"
+      content="https://jrschoolaccount.github.io/Group-Assignment2-Cinema-Project/assets/logga.png"
+    />
+    <meta
+      property="og:url"
+      content="https://jrschoolaccount.github.io/Group-Assignment2-Cinema-Project/"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@kinogrådask" />
+    <meta name="twitter:title" content="Event - Biograf Regna" />
+    <meta
+      name="twitter:description"
+      content="Folkets Bio i Grådask - Officiell webbplats för biograferna. Vi visar prisbelönt kvalitetsfilm från hela världen. Läs vårt program och boka era platser här."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jrschoolaccount.github.io/Group-Assignment2-Cinema-Project/assets/logga.png"
+    />
+    <link rel="stylesheet" type="text/css" href="./static/assets/main.css" />
+    <script type="module" src="./static/main.js" defer></script>
+    <title>Biljetter</title>
+    <link rel="icon" type="image/png" href="./static/assets/logga.png" />
+    <link href="/static/src/output.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <%- include('../views/partials/header.ejs') %>
+    <img
+      class="background__raining"
+      src="./static/assets/raining-background.jpg"
+      alt="raining in the background"
+    />
+    <main>
+      </h1>
+      <div class="overlay fixed inset-0 bg-black bg-opacity-50 z-40" id="overlay"></div>
+      
+      <div id="loginFormContainer" class="fixed  w-custom h-custom p-5 bg-stone-400 shadow-md z-50 custom-position">
+    
+        <form id="login__form" class="space-y-4">
+          <div class="form__group flex flex-col space-y-3 pl-0">
+            <label for="username" class="text-2xl font-medium text-gray-700 text-left">Användarnamn:</label>
+            <input type="text" class="username block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 p-3 text-xl" placeholder="Användarnamn" required autocomplete="username">
+          </div>
+          
+        
+          <div class="form__group flex flex-col space-y-3 pl-0">
+            <label for="password" class="text-2xl font-medium text-gray-700 text-left">Lösenord:</label>
+            <input type="password" class="password block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 p-3 text-xl" placeholder="Lösenord" required autocomplete="current-password">
+          </div>
+            
+          <div class="flex justify-center space-x-20">
+            <button type="submit" class="py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-20">
+                Logga in
+            </button>
+            <button type="button" id="closeLoginFormBtn" class="py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-20">
+               ✘ Stäng
+            </button>
+        </div>
+           
+      </div>
+    </form>
+          
+    </main>
+    <%- include('../views/partials/footer.ejs') %>
+    <script src="/static/login.js"></script>
+  </body>
+</html>
+
+
+
+
+
+<!-- <body> 
   <div class="overlay fixed inset-0 bg-black bg-opacity-50 z-40 hidden" id="overlay"></div>
 
   <link href="/static/src/output.css" rel="stylesheet">
@@ -29,4 +121,4 @@
   </div>
 </form>
   <script src="/static/login.js"></script>
-</body>
+</body> -->
