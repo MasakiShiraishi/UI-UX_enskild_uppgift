@@ -9,6 +9,27 @@ import { getSpecificScreenings } from './specificScreeningsFromApi.js';
 import cmsAdapter from './cmsAdapter.js';
 
 const app = express();
+app.use(express.json());
+
+const users = [
+  { username: 'tester', password: 'tester', email: 'test22@gmail.com' },
+  { username: 'andreas', password: 'andreas', email: 'andreas@gmail.com' },
+  { username: 'masaki', password: 'masaki', email: 'masaki.shiraishi83@gmail.com' }, 
+];
+
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+  const user = users.find(u => u.username === username && u.password === password);
+
+  if (user) {
+    // success to login
+    res.json({ success: true, user });
+  } else {
+    // failed to login
+    res.json({ success: false });
+  }
+});
+
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
@@ -36,6 +57,10 @@ app.get('/evenemang', async (req, res) => {
 
 app.get('/login', async (req, res) => {
   res.render('login');
+});
+
+app.get('/profile', async (req, res) => {
+  res.render('profile');
 });
 
 app.get('/filmer', async (req, res) => {

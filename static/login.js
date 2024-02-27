@@ -7,10 +7,32 @@ document.addEventListener('DOMContentLoaded', function () {
         username: document.querySelector('.username').value,
         password: document.querySelector('.password').value,
       };
-      console.log(loginFormData);
-      // Här kan du vidare hantera datan, exempelvis skicka den till en server
+
+      fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginFormData),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          // LocalStorageにユーザー情報を保存
+          localStorage.setItem('username', data.user.username);
+          localStorage.setItem('email', data.user.email);
+  
+          // プロフィールページにリダイレクト
+          window.location.href = '/profile';
+        } else {
+          alert('ログインに失敗しました。');
+        }
+      })
+      .catch(error => {
+        console.error('ログインエラー:', error);
+      });
     });
-});
+  });
 
 document.addEventListener('DOMContentLoaded', function () {
   document
